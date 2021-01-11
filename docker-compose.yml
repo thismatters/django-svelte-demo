@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    environment:
+      - APP_ENV=dev
+    ports:
+      - "8000:8000"
+    networks:
+      - dev-net
+
+networks:
+  dev-net:
