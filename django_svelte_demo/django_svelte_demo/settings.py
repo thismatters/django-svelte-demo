@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_svelte_demo',
+
     'django_svelte',
+    'rest_framework',
+    'drf_yasg',
+
+    'django_svelte_demo',
 ]
 
 MIDDLEWARE = [
