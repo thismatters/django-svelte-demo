@@ -7,6 +7,12 @@ class SgoodMixin:
     def get(self, request, *args, **kwargs):
         return Response({"sgood": True})
 
+    def post(self, request, *args, **kwargs):
+        print(request.data)
+        print("yes")
+        print(request.user)
+        return Response({"sgood": True, "did_post": True})
+
 
 class RequiresAuthAPIView(APIView, SgoodMixin):
     permission_classes = (IsAuthenticated,)

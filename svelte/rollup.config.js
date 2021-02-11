@@ -87,6 +87,7 @@ let exportable = [];
 [
   "App",
   "AuthComponent",
+  "PostComponent",
 ].forEach((d) => exportable.push(componentExportDetails(d)));
 
 export default exportable;

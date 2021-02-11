@@ -2,7 +2,6 @@
 import { get } from "./api.js";
 let isAuth = false;
 
-
 async function handleClick() {
   console.log("clicked!");
   let res = await get("api/v1/requires-auth/");

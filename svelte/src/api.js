@@ -1,15 +1,34 @@
 const base = "localhost:8000";
 const protocol = "http";
 
+
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      // Does this cookie string begin with the name we want?
+      if (cookie.substring(0, name.length + 1) === (name + '=')) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
 async function send({ method, path, data }) {
   const fetch = window.fetch;
   const opts = { method, headers: {} };
 
   if (data) {
     opts.headers['Content-Type'] = 'application/json';
+    opts.headers['X-CSRFToken'] = getCookie('csrftoken');
     opts.body = JSON.stringify(data);
   }
   let url = `${protocol}://${base}/${path}`;
+  console.log(opts, url);
   return await fetch(url, opts)
     .then(r => r.text())
     .then(json => {
