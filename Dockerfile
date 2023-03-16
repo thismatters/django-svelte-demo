@@ -1,7 +1,7 @@
 FROM python:3.8-alpine as builder
 # RUN adduser -D worker -u 1000
 
-RUN apk add --no-cache git
+RUN apk add --no-cache git build-base
 
 # Get the python dependencies
 COPY requirements.txt /app/
