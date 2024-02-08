@@ -1,4 +1,4 @@
-This demonstration of a Svelte 3 (+Rollup) deployment for django-svelte is no longer current! Please see the Svelte 4 (+Vite) [demo project built in to the django-svelte package](https://github.com/thismatters/django-svelte/tree/main/demo_project).
+# This demonstration of a Svelte 3 (+Rollup) deployment for django-svelte is no longer current! Please see the Svelte 4 (+Vite) [demo project built in to the django-svelte package](https://github.com/thismatters/django-svelte/tree/main/demo_project).
 
 
 ---
