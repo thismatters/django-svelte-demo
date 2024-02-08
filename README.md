@@ -15,4 +15,24 @@ You'll need `docker`, `docker-compose`, and `make` for this to work.
 
 ## Usage
 
-If you've downloaded this and want to run it you should be able to use `make build`, `make run` and `make stop` to build the project, run the project, and stop the project respectively. While running navigate your browser to http://localhost:8000 to see the components at work.
+If you've downloaded this and want to run it you should be able to do
+
+```
+cd svelte
+npm install
+cd ..
+make build
+make run
+```
+
+And see your svelte components within a django template at [localhost:8000/](http://localhost:8000).
+
+And if you've created a superuser with:
+
+```
+python django_svelte_demo/manage.py createsuperuser
+```
+
+You can then use the admin interface at [localhost:8000/admin](http://localhost:8000/admin) to connect that app to your data.
+
+And when you're done you can run `make stop`.
