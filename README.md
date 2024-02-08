@@ -1,3 +1,8 @@
+This demonstration of a Svelte 3 (+Rollup) deployment for django-svelte is no longer current! Please see the Svelte 4 (+Vite) [demo project built in to the django-svelte package](https://github.com/thismatters/django-svelte/tree/main/demo_project).
+
+
+---
+
 # django-svelte-demo
 
 This demo accompanies [django-svelte](https://github.com/thismatters/django-svelte) to illustrate its usage. It is intended to illustrate how Node.js can fit into the development and build environments so that it doesn't have to be used in a production environment.
